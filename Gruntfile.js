@@ -83,6 +83,11 @@ module.exports = function(grunt) {
       sass: {
         files: 'scss/**/*.scss',
         tasks: ['sass', 'copy']
+      },
+
+      html: {
+        files: 'html/**/*.html',
+        tasks: ['copy']
       }
     }
   });
@@ -91,6 +96,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
     
-  grunt.registerTask('build', ['sass']);
+  grunt.registerTask('build', ['sass', 'copy']) ;
   grunt.registerTask('default', ['build','watch']);
 }
