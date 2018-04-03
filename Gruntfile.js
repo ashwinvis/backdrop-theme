@@ -10,7 +10,7 @@ module.exports = function(grunt) {
       dist: {
         options: {
           //outputStyle: 'compressed',
-          sourceMap: true,
+          sourcemap: 'inline',
         },
         files: {
           'css/backdrop.css': 'scss/backdrop.scss'
@@ -82,7 +82,7 @@ module.exports = function(grunt) {
 
       sass: {
         files: 'scss/**/*.scss',
-        tasks: ['sass']
+        tasks: ['sass', 'copy']
       }
     }
   });
@@ -91,6 +91,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
     
-  grunt.registerTask('build', ['sass','copy']);
+  grunt.registerTask('build', ['sass']);
   grunt.registerTask('default', ['build','watch']);
 }

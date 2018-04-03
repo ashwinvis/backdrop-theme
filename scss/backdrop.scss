@@ -106,15 +106,17 @@ footer {
     .content-pane {
         @include grid-column($columns:12,$collapse:true);
         @media #{$large-up} {
-            @include grid-column($columns:8,$collapse:true);
+            @include grid-column($columns:10,$collapse:true);
             min-height: 100%;
+            right: 0;
+	    float: right;
         }
         z-index: 10;
         box-shadow: 0 0 rem-calc(10) rem-calc(2) #333333;
-        position:relative;
+        position: relative;
         
         .row {
-            margin-right: 0;
+            margin-left: 5%;
             min-width: 75%;
         }
     }
@@ -154,11 +156,10 @@ footer {
         }
         
         @media #{$large-up} {
-            @include grid-column($columns:4,$collapse:true);
+            @include grid-column($columns:2,$collapse:true);
             min-height: auto;
             position: fixed;
             padding-left: rem-calc(5);
-            right: 0;
             height: 100%;
             .row {
                 max-width: rem-calc(530);
