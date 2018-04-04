@@ -46,7 +46,7 @@ $footer-height: rem-calc(300);
 
 .article p img {
     float: left;
-    margin: 5px;
+    margin: 25px;
     border: solid 4px #FFFFFF;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
 }
@@ -114,6 +114,10 @@ footer {
         z-index: 10;
         box-shadow: 0 0 rem-calc(10) rem-calc(2) #333333;
         position: relative;
+
+	div, span, a, h1, h2, h3, h4, h5, h6, p {
+	    font-family: $font-family-serif;
+	}
         
         .row {
             margin-left: 5%;
@@ -125,7 +129,7 @@ footer {
     .image-pane {
         @include grid-column($columns:12,$collapse:true);
         z-index: 1;
-        box-shadow: inset 0px 0px 0 2000px rgba(0,0,0,0.15);
+        box-shadow: inset 0px 0px 0 2000px $darkGrey;  // rgba(0,0,0,0.15);
         background-size: cover;
         background-position: center;
         position: relative;
