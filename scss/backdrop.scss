@@ -1,6 +1,12 @@
 @import "charterfont";
-@import "font-awesome";
-  
+
+// FontAwesome 5 settings
+@import "fontawesome";
+$fa-font-path: "../fonts";
+@import "fa-solid";
+@import "fa-regular";
+@import "fa-brands";
+
 @import "settings";
 @import "foundation";
 
@@ -102,6 +108,7 @@ footer {
 .master-row {
     @include grid-row();
     max-width: none;
+    margin-top: rem-calc(35);  // Avoid going behind the fixed nav-bar
 
     .content-pane {
         @include grid-column($columns:12,$collapse:true);
@@ -115,7 +122,7 @@ footer {
         box-shadow: 0 0 rem-calc(10) rem-calc(2) #333333;
         position: relative;
 
-	div, span, a, h1, h2, h3, h4, h5, h6, p {
+	span, h1, h2, h3, h4, h5, h6 {
 	    font-family: $font-family-serif;
 	}
         
@@ -199,7 +206,7 @@ footer {
 
 .title-bar {
     h1 {
-        font-size: rem-calc(50);
+        font-size: rem-calc(42);
         display: inline-block;
         margin-right: rem-calc(20);
         margin-bottom: 0;
@@ -211,7 +218,7 @@ footer {
         margin-top: rem-calc(-10);
     }
     @media #{$medium-up} {
-      h1 { font-size: rem-calc(60); }
+      h1 { font-size: rem-calc(55); }
     }
 
     hr {

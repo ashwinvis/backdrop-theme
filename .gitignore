@@ -1,10 +1,11 @@
 *.DS_Store
 /css/*
-#/bower_components/*
+/bower_components/*
 /node_modules/*
 /pelican-theme/
 /js/foundation.min.js
 /js/jquery.min.js
+/js/jquery.min.map
 /js/modernizr.js
 *.jpg
 *~
