@@ -111,12 +111,10 @@ footer {
     margin-top: rem-calc(35);  // Avoid going behind the fixed nav-bar
 
     .content-pane {
-        @include grid-column($columns:12,$collapse:true);
+        @include grid-column($columns:12);
         @media #{$large-up} {
-            @include grid-column($columns:10,$collapse:true);
+            @include grid-column($columns:10,$collapse:true,$float:right);
             min-height: 100%;
-            right: 0;
-	    float: right;
         }
         z-index: 10;
         box-shadow: 0 0 rem-calc(10) rem-calc(2) #333333;
@@ -134,7 +132,7 @@ footer {
     }
     
     .image-pane {
-        @include grid-column($columns:12,$collapse:true);
+        @include grid-column($columns:12);
         z-index: 1;
         box-shadow: inset 0px 0px 0 2000px $darkGrey;  // rgba(0,0,0,0.15);
         background-size: cover;
