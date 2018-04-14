@@ -105,10 +105,20 @@ footer {
     color: $monsoon;
 }
 
+.top-row {
+  @include grid-row();
+  display: block;
+  line-height: 1;
+  position: absolute;
+  z-index: 20;
+  min-width: 100%;
+  margin: 0;
+}
+
 .master-row {
     @include grid-row();
     max-width: none;
-    margin-top: rem-calc(35);  // Avoid going behind the fixed nav-bar
+    padding-top: rem-calc(40);  // Avoid going behind the fixed top-bar
 
     .content-pane {
         @include grid-column($columns:12);
@@ -123,10 +133,8 @@ footer {
 	span, h1, h2, h3, h4, h5, h6 {
 	    font-family: $font-family-serif;
 	}
-        
+
         .row {
-            margin-left: 5%;
-            margin-right: 10%;
             min-width: 75%;
         }
     }
@@ -173,8 +181,6 @@ footer {
             height: 100%;
             .row {
                 max-width: rem-calc(530);
-                margin-left: 0;
-                margin-right: auto;
             }
         }
     }
@@ -204,7 +210,7 @@ footer {
 
 .title-bar {
     h1 {
-        font-size: rem-calc(42);
+        font-size: rem-calc(33);
         display: inline-block;
         margin-right: rem-calc(20);
         margin-bottom: 0;
@@ -242,13 +248,13 @@ nav.top-bar {
 
 }
 */
+
+
 @media #{$medium-up}{
-/*
-// If you want menu-items to be centred
-    section.top-bar-section {
-        display: inline-block;
-    }
-*/
+//// If you want menu-items to be centred
+//    section.top-bar-section {
+//        display: inline-block;
+//    }
 
     .top-bar li.active:after {
         position: relative;
@@ -266,6 +272,7 @@ nav.top-bar {
         border-left: rem-calc(7) solid transparent;
     }
 }
+
 
 div.transparent {
     background-color:rgba(242,242,242,0.6);
