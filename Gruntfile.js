@@ -5,7 +5,9 @@ module.exports = function(grunt) {
     sass: {
       options: {
           includePaths: ['bower_components/foundation/scss',
-                         'bower_components/fontawesome/web-fonts-with-css/scss/']
+                         'bower_components/fontawesome/web-fonts-with-css/scss/',
+                         'bower_components/academicons/css',
+          ]
       },
       dist: {
         options: {
@@ -23,6 +25,12 @@ module.exports = function(grunt) {
           expand: true,
           flatten: true,
           src: ['bower_components/fontawesome/web-fonts-with-css/webfonts/*'],
+          dest: 'fonts'
+      },
+      academicons: {
+          expand: true,
+          flatten: true,
+          src: ['bower_components/academicons/fonts/*'],
           dest: 'fonts'
       },
       js: {
