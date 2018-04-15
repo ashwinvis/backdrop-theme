@@ -7,6 +7,7 @@ module.exports = function(grunt) {
           includePaths: ['bower_components/foundation/scss',
                          'bower_components/fontawesome/web-fonts-with-css/scss/',
                          'bower_components/academicons/css',
+                         'bower_components/slick-carousel/slick/',
           ]
       },
       dist: {
@@ -33,13 +34,27 @@ module.exports = function(grunt) {
           src: ['bower_components/academicons/fonts/*'],
           dest: 'fonts'
       },
+      slick: {
+          expand: true,
+          flatten: true,
+          src: ['bower_components/slick-carousel/slick/fonts/*'],
+          dest: 'fonts'
+      },
+      slick_loader: {
+          expand: true,
+          flatten: true,
+          src: ['bower_components/slick-carousel/slick/ajax-loader.gif'],
+          dest: 'pelican-theme/static/'
+      },
       js: {
           expand: true,
           flatten: true,
           src: ['bower_components/modernizr/modernizr.js',
                 'bower_components/jquery/dist/jquery.min.js',
                 'bower_components/jquery/dist/jquery.min.map',
-                'bower_components/foundation/js/foundation.min.js'],
+                'bower_components/foundation/js/foundation.min.js',
+                'bower_components/slick-carousel/slick/slick.min.js',
+          ],
           dest: 'js'
       },
       tipue: {
@@ -95,6 +110,11 @@ module.exports = function(grunt) {
 
       html: {
         files: 'html/**/*.html',
+        tasks: ['copy']
+      },
+
+      js: {
+        files: 'js/**/*.js',
         tasks: ['copy']
       }
     }

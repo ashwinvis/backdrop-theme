@@ -12,6 +12,14 @@ $fa-font-path: "../fonts";
 @import "settings";
 @import "foundation";
 
+@import "slick.scss";
+$slick-font-path: "../fonts/";
+$slick-loader-path: "../";
+$slick-arrow-color: $black;
+$slick-dot-color: $midGrey;
+$slick-dot-color-active: $black;
+@import "slick-theme.scss";
+
 // Or selectively include components
 // @import
 //   "foundation/components/accordion",
@@ -149,6 +157,20 @@ footer {
  
         .row {
             min-width: 75%;
+        }
+
+        .carousel-row {
+            @include grid-row();
+            text-align: center;
+
+            .carousel-img {
+            }
+
+            .carousel-nav-title {
+                text-align: center;
+                padding: rem-calc(10);
+                font-size: rem-calc(20);
+            }
         }
     }
     
