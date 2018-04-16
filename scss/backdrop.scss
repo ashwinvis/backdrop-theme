@@ -466,9 +466,10 @@ pre {
 }
 
 .link-img {
-	margin-bottom: 1.875rem;
+	margin-bottom: rem-calc(20);
 	max-width: rem-calc(70);
 	max-height: rem-calc(100);
+        background: white;
 }
 
 @import "tipuesearch";
