@@ -15,7 +15,7 @@ $fa-font-path: "../fonts";
 @import "slick.scss";
 $slick-font-path: "../fonts/";
 $slick-loader-path: "../";
-$slick-arrow-color: $black;
+$slick-arrow-color: $midGrey;
 $slick-dot-color: $midGrey;
 $slick-dot-color-active: $black;
 @import "slick-theme.scss";
@@ -136,7 +136,7 @@ footer {
     .content-pane {
         @include grid-column($columns:12);
         @media #{$large-up} {
-            @include grid-column($columns:10,$collapse:true,$float:right);
+            @include grid-column($columns:9.5,$collapse:true,$float:right);
             min-height: 100%;
         }
         z-index: 10;
@@ -195,7 +195,10 @@ footer {
         div, span, a, p, input {
             font-size: rem-calc(16);
         }
-        
+        .site-description {
+            font-size: rem-calc(12);
+        }
+
         i {
             color: inherit;
         }
@@ -209,7 +212,7 @@ footer {
         }
         
         @media #{$large-up} {
-            @include grid-column($columns:2,$collapse:true);
+            @include grid-column($columns:2.5,$collapse:true);
             min-height: auto;
             position: fixed;
             padding-left: rem-calc(5);
@@ -460,6 +463,12 @@ pre {
     margin-left: auto !important;
     margin-right: auto !important;
     display: block;
+}
+
+.link-img {
+	margin-bottom: 1.875rem;
+	max-width: rem-calc(70);
+	max-height: rem-calc(100);
 }
 
 @import "tipuesearch";
