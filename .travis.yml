@@ -15,6 +15,11 @@ cache:
     - "node_modules"
     - "bower_components"
 
+before_script:
+  - mkdir -p pelican-theme/static/css
+  - mkdir -p pelican-theme/static/js
+  - mkdir -p pelican-theme/templates
+
 script: grunt
 
 branches:
