@@ -2,9 +2,16 @@
 This is a theme for the [Pelican](http://docs.getpelican.com/en/3.5.0/) static
 site generator. It is based on [Zurb Foundation](http://foundation.zurb.com/),
 customized with [Sass](http://sass-lang.com/). It is managed using
-[Grunt](http://gruntjs.com/). To build the theme, run
+[Grunt](http://gruntjs.com/).
 
-    grunt build
+To install dependencies
+
+    npm install
+    bower intall
+
+To build the theme, run
+
+    grunt
 
 Alternatively, a precompiled version of this theme is available in the
 [Pelican Themes](https://github.com/getpelican/pelican-themes) repository.

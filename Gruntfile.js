@@ -21,6 +21,20 @@ module.exports = function(grunt) {
       }
     },
 
+    cssmin: {
+        options: {
+            sourceMap: true
+        },
+        target: {
+            files: [{
+                expand: true,
+                cwd: 'css/',
+                src: ['*.css', '!*.min.css'],
+                dest: 'css/release',
+                ext: '.min.css'
+            }]
+        }
+    },
     copy: {
       font_awesome: {
           expand: true,
@@ -66,13 +80,14 @@ module.exports = function(grunt) {
       pelican_css: {
           expand: true,
           flatten: true,
-          src: ['css/*'],
+          src: ['css/release/*'],
           dest: 'pelican-theme/static/css'
       },
       pelican_js: {
           expand: true,
           flatten: true,
-          src: ['js/*'],
+          // src: ['js/release/*'],  // gzip compressed
+          src: ['js/*.js'],
           dest: 'pelican-theme/static/js'
       },
       pelican_fonts: {
@@ -94,8 +109,21 @@ module.exports = function(grunt) {
           dest: 'pelican-theme/',
       }
     },
-    
-      watch: {
+    // gzip assets 1-to-1 for production
+    compress: {
+      main: {
+        options: {
+          mode: 'gzip'
+        },
+        expand: true,
+        cwd: 'js/',
+        src: '*.js',
+        dest: 'js/release',
+        ext: '.js.gz',
+        extDot: 'last'
+      }
+    },
+    watch: {
       grunt: {
         options: {
           reload: true
@@ -122,8 +150,10 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-contrib-copy');
     
-  grunt.registerTask('build', ['sass', 'copy']) ;
-  grunt.registerTask('default', ['build','watch']);
+  grunt.registerTask('default', ['sass', 'cssmin', 'copy']) ;
+  grunt.registerTask('serve', ['default','watch']);
 }
