@@ -16,6 +16,7 @@ cache:
     - "bower_components"
 
 before_script:
+  - rm pelican-theme
   - mkdir -p pelican-theme/static/css
   - mkdir -p pelican-theme/static/js
   - mkdir -p pelican-theme/templates
