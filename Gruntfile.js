@@ -1,9 +1,15 @@
+const sass = require('node-sass');
+
+// require('load-grunt-tasks')(grunt);
+
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
     sass: {
       options: {
+          implementation: sass,
+          sourcemap: true,
           includePaths: ['bower_components/foundation/scss',
                          'bower_components/fontawesome/web-fonts-with-css/scss/',
                          'bower_components/academicons/css',
