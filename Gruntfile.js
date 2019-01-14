@@ -160,6 +160,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-contrib-copy');
     
-  grunt.registerTask('default', ['sass', 'cssmin', 'copy']) ;
+  grunt.registerTask('default', ['sass', 'cssmin', 'compress', 'copy']) ;
   grunt.registerTask('serve', ['default','watch']);
 }
