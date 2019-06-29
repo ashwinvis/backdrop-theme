@@ -3,15 +3,15 @@ node_js:
   - "10"
 
 before_install:
-  - npm install -g grunt-cli
+  - yarn global add grunt-cli
 
 install:
   - yarn install
 
 cache:
-  yarn: true
-  directories:
-    - "node_modules"
+  - yarn: true
+  - directories:
+      - "node_modules"
 
 before_script:
   - rm pelican-theme
