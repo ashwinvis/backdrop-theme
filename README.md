@@ -6,8 +6,8 @@ customized with [Sass](http://sass-lang.com/). It is managed using
 
 To install dependencies
 
-    npm install
-    bower intall
+    yarn global add grunt-cli
+    yarn install
 
 To build the theme, run
 
@@ -17,8 +17,8 @@ Alternatively, a precompiled version of this theme is available in the
 [Pelican Themes](https://github.com/getpelican/pelican-themes) repository.
 
 If you wish to customize this theme, template files are contained within the
-`html` direcotory, while (s)css is within the `scss` directory. This theme
-uses no custom javascript, but this can be added to the file `js/app.js` if
+`html` directory, while (s)css is within the `scss` directory. This theme
+uses no custom JavaScript, but this can be added to the file `js/app.js` if
 desired.
 
 
@@ -28,14 +28,23 @@ window sizes, built on [Zurb Foundation](http://foundation.zurb.com/).
 It is designed to look modern, but at the same time traditional,
 using a serif font and darker colours. It features full
 [Disqus](https://disqus.com/) integration and can be customized through
-variables in your Pelican configuration file. See it live at my blog,
-[The Political Physicist](http://cmacmackin.github.io/blog/).
+variables in your Pelican configuration file. See it live at
+[my blog](http://ashwinvis.github.io/).
 
-![The homepage](https://raw.githubusercontent.com/cmacmackin/backdrop-theme/master/theme-files-extra/screenshot1.png)
-![An article](https://raw.githubusercontent.com/cmacmackin/backdrop-theme/master/theme-files-extra/screenshot2.png)
+<img src="https://raw.githubusercontent.com/ashwinvis/pelican-bluedrop/master/examples/demo/images/demo-desktop.png" width="70%">
 
-This is an example of the page footer on a medium screen.
-![The footer on a medium screen](https://raw.githubusercontent.com/cmacmackin/backdrop-theme/master/theme-files-extra/screenshot3.png)
+This is an example of the same on a tablet.
+
+<div>
+<img src="https://raw.githubusercontent.com/ashwinvis/pelican-bluedrop/master/examples/demo/images/demo-tablet-top.png" width="35%"/>
+<img src="https://raw.githubusercontent.com/ashwinvis/pelican-bluedrop/master/examples/demo/images/demo-tablet-bot.png" width="35%"/>
+</div>
+
+This is an example of the same on a mobile.
+<div>
+<img src="https://raw.githubusercontent.com/ashwinvis/pelican-bluedrop/master/examples/demo/images/demo-mobile-top.png" width="35%"/>
+<img src="https://raw.githubusercontent.com/ashwinvis/pelican-bluedrop/master/examples/demo/images/demo-mobile-bot.png" width="35%"/>
+</div>
 
 I you want to customize Backdrop, perhaps consider using
 [Sass](http://sass-lang.com/) and [Grunt](http://gruntjs.com/), as I did when
@@ -84,7 +93,7 @@ customize your website.
   website
 - `LICENSE`, the license under which to release the websites contents
   (ex: Creative Commons). Write it in HTML in order to use an image and/or link.
-- `BLOGKEYWORDS`, a list or tuple of strings containg keywords to be placed
+- `BLOGKEYWORDS`, a list or tuple of strings containing keywords to be placed
   in the metadata of your website, allowing Google to better categorize it
 
 The paths for FAVICON, PROFILE\_IMAGE, and BACKDROP\_IMAGE can all use the
