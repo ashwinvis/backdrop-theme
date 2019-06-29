@@ -1,8 +1,9 @@
 *.DS_Store
 /css/*
 /fonts/*
-/bower_components/*
+/bower_components
 /node_modules/*
+yarn.lock
 /pelican-theme/
 /js/foundation.min.js
 /js/jquery.min.js
