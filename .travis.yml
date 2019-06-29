@@ -3,17 +3,15 @@ node_js:
   - "10"
 
 before_install:
-  - npm install -g grunt-cli
-  - npm install -g bower
+  - yarn global add grunt-cli
 
 install:
-  - npm install
-  - bower install
+  - yarn install
 
 cache:
-  directories:
-    - "node_modules"
-    - "bower_components"
+  - yarn: true
+  - directories:
+      - "node_modules"
 
 before_script:
   - rm pelican-theme
