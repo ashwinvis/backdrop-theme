@@ -77,7 +77,7 @@ $footer-height: rem-calc(300);
 .about-me {
     padding-bottom: rem-calc(20);
     overflow: hidden;
-    
+
     h5 {
         margin-top: 0;
     }
@@ -96,16 +96,16 @@ footer {
     border-top: rem-calc(4) solid $topbar-bg-color;
     background: $silver;
     min-width: 100%;
-    
+
     p {
         margin-bottom: rem-calc(10);
     }
-    
+
     hr {
         margin-top: 0;
         margin-bottom: rem-calc(10);
     }
-    
+
     .tag-cloud {
         margin-top: rem-calc(21);
         margin-bottom: rem-calc(20);
@@ -154,7 +154,7 @@ footer {
 	 white-space: -o-pre-wrap;    /* Opera 7 */
 	 word-wrap: break-word;       /* Internet Explorer 5.5+ */
 	}
- 
+
         .row {
             min-width: 75%;
         }
@@ -173,7 +173,7 @@ footer {
             }
         }
     }
-    
+
     .image-pane {
         @include grid-column($columns:12);
         z-index: 1;
@@ -187,11 +187,11 @@ footer {
         * {
             color: $white;
         }
-        
+
         form {
             color:  $body-font-color;
         }
-        
+
         div, span, a, p, input {
             font-size: rem-calc(16);
         }
@@ -202,7 +202,7 @@ footer {
         i {
             color: inherit;
         }
-        
+
         $about-me-anchor-font-color: $silver;
         a {
             color: $about-me-anchor-font-color
@@ -210,7 +210,7 @@ footer {
         a:active, a:hover {
             color: scale-color($about-me-anchor-font-color, $lightness: -14%);
         }
-        
+
         @media #{$large-up} {
             @include grid-column($columns:2.5,$collapse:true);
             min-height: auto;
@@ -325,7 +325,7 @@ table.transparent {
     margin-left: auto;
     margin-right: auto;
     thead, tr:nth-child(even) {
-        background-color:rgba(249,249,249,0.6);    
+        background-color:rgba(249,249,249,0.6);
     }
 }
 
@@ -334,7 +334,7 @@ table.transparent {
     padding-right: 0;
 }
 
-.left-nav {  
+.left-nav {
     @include side-nav;
     li {
         margin: 0;
@@ -372,7 +372,7 @@ table.transparent {
         margin-left: initial;
         margin-right: initial;
     }
-    
+
     li {
         margin-bottom: 0;
         a:not(.botton) {
@@ -380,7 +380,7 @@ table.transparent {
             padding-bottom: rem-calc(3);
         }
     }
-    
+
     li.heading {
         color: $charcoal;
         padding-left: rem-calc(10);
@@ -436,18 +436,18 @@ pre {
     text-align: center;
     margin-bottom: 0;
     margin-left: 0;
-    
+
     li {
         display: inline-block;
     }
-    
+
     a:not(.button) {
         padding-left: rem-calc(11);
         padding-right: rem-calc(11);
         padding-top: rem-calc(6);
         padding-bottom: rem-calc(6);
     }
-    
+
     a:not(.button):hover {
         background: rgba(0, 0, 0, 0.05);
     }

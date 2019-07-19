@@ -142,6 +142,11 @@ module.exports = function(grunt) {
         tasks: ['sass', 'copy']
       },
 
+      css: {
+        files: 'css/{dark,pygments}.css',
+        tasks: ['cssmin', 'copy']
+      },
+
       html: {
         files: 'html/**/*.html',
         tasks: ['copy']
@@ -159,7 +164,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-contrib-copy');
-    
+
   grunt.registerTask('default', ['sass', 'cssmin', 'compress', 'copy']) ;
   grunt.registerTask('serve', ['default','watch']);
 }
